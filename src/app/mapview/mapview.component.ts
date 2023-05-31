@@ -2,7 +2,6 @@
 import { Component, ElementRef, ViewChild, ComponentRef, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
 
 import { loadModules } from 'esri-loader';
-import { SidemenuComponent} from '../sidemenu/sidemenu.component';
 
 
 
@@ -18,7 +17,8 @@ export class MapviewComponent {
   showFiller = false;
   view: any;
   zoomValue: any;
- 
+ isRightArrowButton:boolean=true;
+ showLeftPanel:boolean=false;
 
   
   constructor(private vcRef: ViewContainerRef, private resolver: ComponentFactoryResolver) { }
@@ -27,6 +27,7 @@ export class MapviewComponent {
   }
 
 initMap() {
+
 
 loadModules([
 
@@ -65,35 +66,21 @@ container: "viewDiv", // Div element
 
 map: webMap,
 
-// center: [-118.805, 34.027], // Longitude, latitude
 
-//zoom: 12, // Zoom level
  });
-//  const zoomChanged=(newValue:any,oldValue:any)=>{
-//   console.log(newValue,oldValue);
-//   this.zoomValue=newValue;
-//  }
-//  this.view.watch('zoom',zoomChanged);
-//    this.view.ui.add('heading-for-map', 'top-right');
+
  })
  
 }
-// onLoad(iframe:any){
-//   this.doc = iframe.contentDocument || iframe.contentWindow;
-//   this.createComponent();
+
+onClose(){
+ 
+this.isRightArrowButton=!this.isRightArrowButton;
+
+}
+// onOpen(){
+//   this.isLeftArrowButton=true;
+//   this.isRightArrowButton=false;
 // }
 
-// createComponent() {
-//   const compFactory = this.resolver.resolveComponentFactory(SidemenuComponent);
-//   this.compRef = this.vcRef.createComponent(compFactory);
-//   this.compRef.location.nativeElement.id = 'innerComp';
-
-//   (<SidemenuComponent>this.compRef.instance).firstInput = this.firstInput;
-
-//   // (<SidemenuComponent>this.compRef.instance).emitOutput.subscribe((response:any) => {
-//   //   console.log(response);
-//   // });
-
-//   this.doc.body.appendChild(this.iframe.nativeElement);
-// }
 }

@@ -1,51 +1,107 @@
 
     #container {
-
+      margin-top: 5vh;
     height: 100%;
   } 
   
     #leftPanel {
     width: 30%;
-  height: 90vh;
+  height: 100%;
+  /* top: 5%; */
   } 
    
   #viewDiv {
    
-    top: 10%;
+    /* top: 5%; */
     padding: 0;
     margin: 0;
    
     z-index: 1;
     position: absolute;
     right: 0;
-    width: 70%;
-    height: 90vh;
+    /* width: 70%; */
+    height: 94%;
     border :1px solid #333;
     transform: scale(1);
   }
+  .map-view {
+   
+    /* top: 5%; */
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    width: 70%!important;
+    height: 94%;
+    border :1px solid #333;
+    transform: scale(1);
+  }
+  .left-view{
+    width:30%
+  }
+  .left-close{
+    width:100%
+  }
+  .map-view-close{
+    width: 100% !important;
+  }
+  .btn-style-close{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    z-index: 999;
+  }
+  .btn-style{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 30%;
+    z-index: 999;
+  }
 
  .example-container    {
-    position: absolute;
-    top: 10%;
-    width: 30%;
-    height: 90vh;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+  position: absolute;
+  /* top: 5%; */
+  left: 0;
+  width: 30%;
+  height: 94vh;
 
     
   } 
   
   .example-sidenav-content {
-    display: flex; 
+ 
     height: 100%;
-    align-items: center;
-    justify-content: center; 
+ 
   }
-  
+  .example-sidenav-content button{
+    
+   
+  }
+  .example-sidenav-content :nth-child(0){
+    position: absolute;
+    left: 0px;
+  }
+  .example-sidenav-content :nth-child(1){
+    position: absolute;
+    right: 0px;
+  }
   .example-sidenav {
     padding: 10px;
+    background-color:#eee;
+    width: 100%;
   } 
 
-  @media (max-width: 320px) {
+  .card-style{
+    width: 15rem;
+    margin-bottom: 5px;
+  }
+ 
+   @media (max-width: 320px) {
     #leftPanel .example-container{
         width:100%
    }
@@ -55,10 +111,11 @@
        display: none;
 
    }
+
     
  }
  @media (min-width: 321px) and (max-width: 480px) {
-    #leftPanel .example-container .example-sidenav-content{
+    #leftPanel  {
         width:20%
    }
    
@@ -69,7 +126,7 @@
    }
  }
   @media screen and (max-width: 767px) {
-    #leftPanel .example-container .example-sidenav-content{
+    #leftPanel {
          width:20%
     }
     
@@ -83,7 +140,7 @@
 
     
     @media screen and (max-width: 993px) {
-        #leftPanel .example-container .example-sidenav-content{
+        #leftPanel {
             width:20%
        }
        
@@ -95,7 +152,7 @@
     }
     
     @media screen and (max-width: 1280px) {
-        #leftPanel .example-sidenav-content .example-container{
+        #leftPanel {
             width:30%
        }
        
@@ -108,7 +165,7 @@
     
     
     @media screen and (max-width: 1920px) {
-        #leftPanel .example-sidenav-content .example-container{
+        #leftPanel {
             width:30%
        }
        
@@ -117,9 +174,11 @@
            width:70%
     
        }
+
+      
     }
-    @media screen and (max-width: 2560px) {
-        #leftPanel .example-container .example-sidenav-content{
+    @media screen and (min-width: 1921px) and (max-width:2500px) {
+        #leftPanel {
             width:30%
        }
        
@@ -128,5 +187,9 @@
            width:70%
     
        }
-       
+       .col{
+        width:50%
+       }
       }
+        
+      

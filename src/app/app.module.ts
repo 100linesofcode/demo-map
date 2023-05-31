@@ -8,7 +8,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {NgIf} from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
-
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +21,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     AppRoutingModule,
     MatSidenavModule, 
     NgIf, 
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   
   ],
 
